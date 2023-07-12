@@ -6,6 +6,7 @@ import {
     Button,
     IconButton,
 } from "@material-tailwind/react";
+import { Link } from 'react-router-dom';
 const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
         <Typography
@@ -78,7 +79,7 @@ const NavigationBar = () => {
                             size="sm"
                             className="hidden lg:inline-block"
                         >
-                            <span>Login</span>
+                            <Link to='/login'>Login</Link>
                         </Button>
                         <IconButton
                             variant="text"
@@ -122,7 +123,7 @@ const NavigationBar = () => {
                 <MobileNav open={openNav}>
                     {navList}
                     <Button variant="gradient" size="sm" fullWidth className="mb-2">
-                        <span>Login</span>
+                        <Link to='/login'>Login</Link>
                     </Button>
                 </MobileNav>
             </Navbar>
