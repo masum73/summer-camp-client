@@ -16,9 +16,9 @@ const navList = (
             color="blue-gray"
             className="p-1 font-normal"
         >
-            <a href="#" className="flex items-center">
+            <Link to="/" className="flex items-center">
                 Home
-            </a>
+            </Link>
         </Typography>
         <Typography
             as="li"
@@ -26,9 +26,9 @@ const navList = (
             color="blue-gray"
             className="p-1 font-normal"
         >
-            <a href="#" className="flex items-center">
+            <Link to="/instructor" className="flex items-center">
                 Instructors
-            </a>
+            </Link>
         </Typography>
         <Typography
             as="li"
@@ -36,9 +36,9 @@ const navList = (
             color="blue-gray"
             className="p-1 font-normal"
         >
-            <a href="#" className="flex items-center">
+            <Link to="/class" className="flex items-center">
                 Classes
-            </a>
+            </Link>
         </Typography>
         <Typography
             as="li"
@@ -46,9 +46,9 @@ const navList = (
             color="blue-gray"
             className="p-1 font-normal"
         >
-            <a href="#" className="flex items-center">
+            <Link to="dashboard" className="flex items-center">
                 Dashboard
-            </a>
+            </Link>
         </Typography>
     </ul>
 );

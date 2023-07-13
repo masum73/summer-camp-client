@@ -43,8 +43,14 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser);
             console.log('current user', currentUser);
             setLoading(false);
-            // get and set token
+            // get user email role for admin dashboard
             if (currentUser) {
+                axios.get(`http://localhost:5000/users/${currentUser.email}`)
+                .then(data => {
+                    setUser(data.data.data)
+                    setLoading(false)
+                })
+                // get and set token
                 axios.post('http://localhost:5000/jwt', { email: currentUser.email })
                     .then(data => {
                         console.log(data.data.token)
