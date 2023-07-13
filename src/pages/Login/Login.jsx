@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     Card,
     CardHeader,
@@ -8,9 +8,57 @@ import {
     Input,
     Button,
 } from "@material-tailwind/react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+    const { handleSubmit, register } = useForm();
+    const { signIn, googleSignIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
+
+    const onSubmit = (data) => {
+        console.log(data);
+        signIn(data.email, data.password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                Swal.fire({
+                    title: 'User Login Successful.',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+                navigate(from, { replace: true });
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(() => {
+                        navigate(from, { replace: true });
+                    })
+            })
+    }
     return (
         <div className='w-9/12 mx-auto my-12 flex justify-center items-center'>
             <Card className="w-96 border border-lime-500 ">
@@ -24,14 +72,21 @@ const Login = () => {
                     </Typography>
                 </CardHeader>
                 <CardBody className="flex flex-col gap-4">
-                    <Input label="Email" size="lg" />
-                    <Input label="Password" size="lg" />
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className='my-4'>
+                            <Input type="email" label='Email' size="lg" {...register("email", { required: true })} name="email" />
+                        </div>
+                        <div className='my-4'>
+                            <Input type="text" label='Password' size="lg" {...register("password", { required: true })} name="password" />
+                        </div>
+                        <Button color='green' type='submit' variant="gradient" fullWidth>
+                            Login
+                        </Button>
+                    </form>
                 </CardBody>
                 <CardFooter className="pt-0">
-                    <Button color='green' variant="gradient" fullWidth>
-                        Login
-                    </Button>
-                    <Button className='mt-4' color='lime' variant="gradient" fullWidth>
+
+                    <Button onClick={handleGoogleSignIn} className='mt-4' color='lime' variant="gradient" fullWidth>
                         Login with Google
                     </Button>
                     <Typography variant="small" className="mt-6 flex justify-center">
