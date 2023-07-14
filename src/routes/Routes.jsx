@@ -17,6 +17,7 @@ import SelectedClass from "../pages/StudentDashboard/SelectedClass";
 import EnrolledClass from "../pages/StudentDashboard/EnrolledClass";
 import Payment from "../pages/StudentDashboard/Payment";
 import PaymentHistory from "../pages/StudentDashboard/PaymentHistory";
+import InstructorUpdateClass from "../pages/InstructorDashboard/InstructorUpdateClass";
 
 export const router = createBrowserRouter([
     {
@@ -46,42 +47,46 @@ export const router = createBrowserRouter([
         ]
     },
     {
-        path:'dashboard',
-        element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        path: 'dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
             // admin dashboard
             {
-                path:'adminmanageclass',
+                path: 'adminmanageclass',
                 element: <AdminManageClass></AdminManageClass>
             },
             {
-                path:'adminmanageuser',
+                path: 'adminmanageuser',
                 element: <AdminManageUser></AdminManageUser>
             },
             // instructor dashboard
             {
-                path:'instructoraddclass',
+                path: 'instructoraddclass',
                 element: <InstructorAddClass></InstructorAddClass>
             },
             {
-                path:'instructormyclass',
+                path: 'instructormyclass',
                 element: <InstructorMyClass></InstructorMyClass>
+            },
+            {
+                path: 'updateclass/:id',
+                element: <InstructorUpdateClass></InstructorUpdateClass>
             },
             // student dashboard
             {
-                path:'selectedclass',
+                path: 'selectedclass',
                 element: <SelectedClass></SelectedClass>
             },
             {
-                path:'enrolledclass',
+                path: 'enrolledclass',
                 element: <EnrolledClass></EnrolledClass>
             },
             {
-                path:'payment',
+                path: 'payment',
                 element: <Payment></Payment>
             },
             {
-                path:'paymenthistory',
+                path: 'paymenthistory',
                 element: <PaymentHistory></PaymentHistory>
             },
         ]

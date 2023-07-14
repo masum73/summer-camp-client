@@ -40,7 +40,7 @@ const Dashboard = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
-            <div className='flex justify-center items-center gap-5'>
+            <div className='flex justify-center  gap-5'>
                 <div className='w-1/4'>
                     <List className='w-10 my-5'>
                         {
@@ -53,8 +53,8 @@ const Dashboard = () => {
                         }
                     </List>
                 </div>
-                <div className='w-9/12'>
-                    <h2 className='text-3xl'>Welcome, {user?.role}</h2>
+                <div className='w-9/12 mb-48'>
+                    <h2 className='text-3xl my-12'>Welcome, {user?.role}</h2>
                     <Outlet></Outlet>
                 </div>
             </div>

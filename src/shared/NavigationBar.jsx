@@ -46,7 +46,7 @@ const navList = (
             color="blue-gray"
             className="p-1 font-normal"
         >
-            <Link to="dashboard" className="flex items-center">
+            <Link to="/dashboard" className="flex items-center">
                 Dashboard
             </Link>
         </Typography>
