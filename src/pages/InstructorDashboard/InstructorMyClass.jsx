@@ -56,7 +56,7 @@ const InstructorMyClass = () => {
                                         </Typography>
                                     </td>
                                     <td className={classes}>
-                                        <Link to={`/dashboard/instructormyclass/updateclass/${_id}`}><Button  className='mr-5' color="green" >Update class</Button></Link>
+                                        <Link to={`/dashboard/updateclass/${_id}`}><Button  className='mr-5' color="green" >Update class</Button></Link>
                                         
                                     </td>
                                 </tr>
