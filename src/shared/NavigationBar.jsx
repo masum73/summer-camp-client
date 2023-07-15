@@ -5,6 +5,7 @@ import {
     Typography,
     Button,
     IconButton,
+    Avatar,
 } from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
@@ -83,6 +84,9 @@ const NavigationBar = () => {
                     </Typography>
                     <div className="flex items-center gap-4">
                         <div className="mr-4 hidden lg:block">{navList}</div>
+                        {
+                            user && <Avatar src={user?.photoURL} alt="User Photo" withBorder={true} color="green" className="p-0.5" />
+                        }
                         {
                             user ?
                                 <>

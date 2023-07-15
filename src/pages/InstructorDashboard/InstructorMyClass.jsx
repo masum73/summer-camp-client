@@ -10,7 +10,7 @@ const InstructorMyClass = () => {
 
     return (
         <div>
-            <h1>Instructor My class</h1>
+            <h1 className='text-2xl my-4'>Instructor - My Classes</h1>
             <Card className="overflow-scroll h-full w-9/12">
                 <table className="w-full min-w-max table-auto text-left">
                     <thead>

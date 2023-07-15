@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 import { Button, Input } from '@material-tailwind/react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { data } from 'autoprefixer';
 
 const InstructorUpdateClass = () => {
     const { register, handleSubmit, reset } = useForm();
