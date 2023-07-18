@@ -9,6 +9,7 @@ import {
 } from "@material-tailwind/react";
 import useClass from '../../hooks/useClass';
 import { AuthContext } from '../../providers/AuthProvider';
+import axios from 'axios';
 
 
 const Class = () => {
@@ -18,12 +19,16 @@ const Class = () => {
 
     console.log(classLists);
 
-    const mustLogin = () => {
+    const mustLogin = (cls) => {
         console.log(user);
         if (user === null) {
-            window.location.href = '/login'
+           return window.location.href = '/login'
         }
 
+        axios.post('http://localhost:5000/student/class', {classId: cls._id, studentId: user._id, status: 'selected'})
+        .then( data => {
+            console.log(data);
+        })
     }
 
     return (
@@ -50,7 +55,7 @@ const Class = () => {
                                 </Typography>
                             </CardBody>
                             <CardFooter className="pt-0">
-                                <Button disabled={user?.role === 'admin' || user?.role === 'instructor' || classes.availableSeats === 0} onClick={mustLogin}>Select Class</Button>
+                                <Button disabled={user?.role === 'admin' || user?.role === 'instructor' || classes.availableSeats === 0} onClick={()=>mustLogin(classes)}>Select Class</Button>
                             </CardFooter>
                         </Card>
                     })
