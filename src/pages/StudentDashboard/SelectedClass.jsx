@@ -43,7 +43,7 @@ const SelectedClass = () => {
                             <tr key={name}>
                                 <td className={classes}>
                                     <Typography variant="small" color="blue-gray" className="font-normal">
-                                        {studentClass.class.name}
+                                        {studentClass.class.className}
                                     </Typography>
                                 </td>
                                 <td className={classes}>
@@ -58,7 +58,7 @@ const SelectedClass = () => {
                                 </td>
                                 <td className={classes}>
                                     <Typography variant="small" color="blue-gray" className="font-normal">
-                                        {studentClass.user.name}
+                                        {studentClass.instructor.name}
                                     </Typography>
                                 </td>
 
