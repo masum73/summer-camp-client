@@ -13,7 +13,8 @@ const PopularInstructor = () => {
     const [users, loading, refetch] = useInstructor();
 
     return (
-        <div>
+        <div className='w-9/12 mx-auto'>
+            <Typography variant='h3' className='text-center my-12'>Popular Instructor</Typography>
             <div className='grid grid-cols-1 md:grid-cols-3 justify-center items-center'>
                 {
                     users.slice(0,6).map((user, index) => {

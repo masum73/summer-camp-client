@@ -55,7 +55,7 @@ const Class = () => {
                                 </Typography>
                             </CardBody>
                             <CardFooter className="pt-0">
-                                <Button disabled={user?.role === 'admin' || user?.role === 'instructor' || classes.availableSeats === 0} onClick={()=>mustLogin(classes)}>Select Class</Button>
+                                <Button color='green' disabled={user?.role === 'admin' || user?.role === 'instructor' || classes.availableSeats === 0} onClick={()=>mustLogin(classes)}>Select Class</Button>
                             </CardFooter>
                         </Card>
                     })

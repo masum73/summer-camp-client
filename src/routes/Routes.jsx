@@ -18,11 +18,13 @@ import EnrolledClass from "../pages/StudentDashboard/EnrolledClass";
 import Payment from "../pages/StudentDashboard/Payment";
 import PaymentHistory from "../pages/StudentDashboard/PaymentHistory";
 import InstructorUpdateClass from "../pages/InstructorDashboard/InstructorUpdateClass";
+import ErrorPage from "../shared/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -49,6 +51,7 @@ export const router = createBrowserRouter([
     {
         path: 'dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             // admin dashboard
             {

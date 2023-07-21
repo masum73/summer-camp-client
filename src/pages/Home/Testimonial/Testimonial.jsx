@@ -44,9 +44,7 @@ const Testimonial = () => {
                     </CardHeader>
                     <CardBody className="mb-6 p-0">
                         <Typography>
-                            &quot;I found solution to all my design needs from Creative Tim. I use
-                            them as a freelancer in my hobby projects for fun! And its really
-                            affordable, very humble guys !!!&quot;
+                            &quot;I have an amazing experience!! love the classes.&quot;
                         </Typography>
                     </CardBody>
                 </Card>
@@ -66,7 +64,7 @@ const Testimonial = () => {
                         <div className="flex w-full flex-col gap-0.5">
                             <div className="flex items-center justify-between">
                                 <Typography variant="h5" color="blue-gray">
-                                    Tania Andrew
+                                    John Smith
                                 </Typography>
                                 <div className="5 flex items-center gap-0">
                                     <StarIcon className="h-5 w-5 text-yellow-700" />
@@ -76,14 +74,12 @@ const Testimonial = () => {
                                     <StarIcon className="h-5 w-5 text-yellow-700" />
                                 </div>
                             </div>
-                            <Typography color="blue-gray">Frontend Lead @ Google</Typography>
+                            <Typography color="blue-gray">Software Engineer</Typography>
                         </div>
                     </CardHeader>
                     <CardBody className="mb-6 p-0">
                         <Typography>
-                            &quot;I found solution to all my design needs from Creative Tim. I use
-                            them as a freelancer in my hobby projects for fun! And its really
-                            affordable, very humble guys !!!&quot;
+                            &quot;It's really affordable, very humble guys !!!&quot;
                         </Typography>
                     </CardBody>
                 </Card>
@@ -103,7 +99,7 @@ const Testimonial = () => {
                         <div className="flex w-full flex-col gap-0.5">
                             <div className="flex items-center justify-between">
                                 <Typography variant="h5" color="blue-gray">
-                                    Tania Andrew
+                                    Mike Costa
                                 </Typography>
                                 <div className="5 flex items-center gap-0">
                                     <StarIcon className="h-5 w-5 text-yellow-700" />
@@ -113,14 +109,12 @@ const Testimonial = () => {
                                     <StarIcon className="h-5 w-5 text-yellow-700" />
                                 </div>
                             </div>
-                            <Typography color="blue-gray">Frontend Lead @ Google</Typography>
+                            <Typography color="blue-gray">MERN Developer</Typography>
                         </div>
                     </CardHeader>
                     <CardBody className="mb-6 p-0">
                         <Typography>
-                            &quot;I found solution to all my design needs from Creative Tim. I use
-                            them as a freelancer in my hobby projects for fun! And its really
-                            affordable, very humble guys !!!&quot;
+                            &quot;High valued instructors and premium classes!!&quot;
                         </Typography>
                     </CardBody>
                 </Card>

@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import axios from 'axios';
 import './CheckoutForm.css'
+import { Button } from '@material-tailwind/react';
 
 const CheckoutForm = ({ studentClass }) => {
 
@@ -118,9 +119,9 @@ const CheckoutForm = ({ studentClass }) => {
                         },
                     }}
                 />
-                <button className="btn btn-primary btn-sm mt-4" type="submit" disabled={!stripe || !clientSecret || processing}>
+                <Button color='lime' className="btn btn-primary btn-sm mt-4" type="submit" disabled={!stripe || !clientSecret || processing}>
                     Pay
-                </button>
+                </Button>
                 {/* <button className="btn btn-primary btn-sm mt-4" type="submit">
                     Pay
                 </button> */}
