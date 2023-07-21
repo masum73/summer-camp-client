@@ -7,7 +7,9 @@ const Main = () => {
     return (
         <>
             <NavigationBar></NavigationBar>
+            <div style={{minHeight: "80vh"}}>
             <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </>
     );

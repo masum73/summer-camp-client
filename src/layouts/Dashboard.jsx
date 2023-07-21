@@ -40,7 +40,7 @@ const Dashboard = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
-            <div className='flex justify-center  gap-5'>
+            <div className='flex justify-center  gap-5 ' style={{minHeight: "80vh"}}>
                 <div className='w-1/4'>
                     <List className='w-10 my-5'>
                         {

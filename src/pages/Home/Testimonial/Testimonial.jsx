@@ -12,7 +12,7 @@ const Testimonial = () => {
     return (
         <div className='w-9/12 mx-auto'>
            <Typography variant='h3' className='text-center my-12'>Testimonials</Typography>
-            <div className='grid grid-cols-3'>
+            <div className='grid grid-cols-1 md:grid-cols-3'>
                 <Card color="transparent" shadow={false} className="w-full max-w-[26rem]">
                     <CardHeader
                         color="transparent"
