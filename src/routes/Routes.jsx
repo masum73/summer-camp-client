@@ -82,7 +82,7 @@ export const router = createBrowserRouter([
                 element: <EnrolledClass></EnrolledClass>
             },
             {
-                path: 'payment',
+                path: 'payment/:studentClassId',
                 element: <Payment></Payment>
             },
             {

@@ -2,17 +2,30 @@ import { Button, Card, Typography } from '@material-tailwind/react';
 import React, { useContext } from 'react';
 import useSelectedClass from '../../hooks/useSelectedClass';
 import { AuthContext } from '../../providers/AuthProvider';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const TABLE_HEAD = ["Class Name", "Available Seats", "Total Enrolled Students", "Instructor", "Action"];
 
 const SelectedClass = () => {
     const {user} = useContext(AuthContext);
     let selectedClass = []
+    let refetchTo = () => {
+
+    }
     // console.log(user);
     if(user._id){
         console.log(user)
         const [classes, loading, refetch] = useSelectedClass('?studentId='+ user._id)
         selectedClass = classes; 
+        refetchTo = refetch;
+    }
+
+    const handleDelete = (id) => {
+        axios.delete(`http://localhost:5000/selectedclass/${id}`)
+        .then(data => {
+            refetchTo()
+        })
     }
    
     console.log(selectedClass);
@@ -63,8 +76,8 @@ const SelectedClass = () => {
                                 </td>
 
                                 <td className={classes}>
-                                    <Button  className='mr-5' color="green">Make Payment</Button>
-                                    <Button  color="amber">Delete</Button>
+                                    <Link to={`/dashboard/payment/${studentClass._id}`}><Button  className='mr-5' color="green">Make Payment</Button></Link>
+                                    <Button onClick={() => handleDelete(studentClass._id)}  color="amber">Delete</Button>
                                 </td>
 
                             </tr>
