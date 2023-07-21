@@ -5,7 +5,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const TABLE_HEAD = ["Class Name", "Available Seats", "Total Enrolled Students", "Instructor", "Action"];
+const TABLE_HEAD = ["Class Name", "Available Seats", "Total Enrolled Students", "Price","Instructor", "Action"];
 
 const SelectedClass = () => {
     const {user} = useContext(AuthContext);
@@ -16,7 +16,7 @@ const SelectedClass = () => {
     // console.log(user);
     if(user._id){
         console.log(user)
-        const [classes, loading, refetch] = useSelectedClass('?studentId='+ user._id)
+        const [classes, loading, refetch] = useSelectedClass('?status=selected&studentId='+ user._id)
         selectedClass = classes; 
         refetchTo = refetch;
     }
@@ -67,6 +67,11 @@ const SelectedClass = () => {
                                 <td className={classes}>
                                     <Typography variant="small" color="blue-gray" className="font-normal">
                                         {studentClass.class.enrolledStudents}
+                                    </Typography>
+                                </td>
+                                <td className={classes}>
+                                    <Typography variant="small" color="blue-gray" className="font-normal">
+                                        ${studentClass.class.price}
                                     </Typography>
                                 </td>
                                 <td className={classes}>

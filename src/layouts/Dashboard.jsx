@@ -33,7 +33,7 @@ const Dashboard = () => {
         links = [
             { to: "selectedclass", title: "Selected Classes" },
             { to: "enrolledclass", title: "Enrolled Classes" },
-            { to: "payment", title: "Payment" },
+            // { to: "payment", title: "Payment" },
             { to: "paymenthistory", title: "Payment History" },
         ]
     }
