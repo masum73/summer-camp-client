@@ -45,13 +45,13 @@ const AuthProvider = ({ children }) => {
             setLoading(false);
             // get user email role for admin dashboard
             if (currentUser) {
-                axios.get(`http://localhost:5000/users/${currentUser.email}`)
+                axios.get(`https://musical-melody-server.vercel.app/users/${currentUser.email}`)
                 .then(data => {
                     setUser(data.data.data)
                     setLoading(false)
                 })
                 // get and set token
-                axios.post('http://localhost:5000/jwt', { email: currentUser.email })
+                axios.post('https://musical-melody-server.vercel.app/jwt', { email: currentUser.email })
                     .then(data => {
                         console.log(data.data.token)
                         localStorage.setItem('access-token', data.data.token)

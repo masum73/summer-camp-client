@@ -12,7 +12,7 @@ const Payment = () => {
     const [studentClass, setStudentClass] = useState(null);
     useEffect(() => {
 
-        axios.get(`http://localhost:5000/selectedclass/${studentClassId}`)
+        axios.get(`https://musical-melody-server.vercel.app/selectedclass/${studentClassId}`)
             .then(data => {
                 // console.log(data.data);
                 setStudentClass(data.data)

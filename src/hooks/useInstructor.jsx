@@ -7,7 +7,7 @@ const useInstructor = () => {
         queryKey: ['instructors'],
         
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/users/instructor');
+            const res = await fetch('https://musical-melody-server.vercel.app/users/instructor');
             return res.json();
         }
     })

@@ -25,7 +25,7 @@ const Class = () => {
            return window.location.href = '/login'
         }
 
-        axios.post('http://localhost:5000/student/class', {classId: cls._id, studentId: user._id, status: 'selected'})
+        axios.post('https://musical-melody-server.vercel.app/student/class', {classId: cls._id, studentId: user._id, status: 'selected'})
         .then( data => {
             console.log(data);
         })

@@ -22,7 +22,7 @@ const SelectedClass = () => {
     }
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/selectedclass/${id}`)
+        axios.delete(`https://musical-melody-server.vercel.app/selectedclass/${id}`)
         .then(data => {
             refetchTo()
         })

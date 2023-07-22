@@ -12,13 +12,13 @@ const AdminManageUser = () => {
     const [users,loading, refetch] = useUser();
     console.log(users);
     const makeAdmin = (id) => {
-        axios.patch(`http://localhost:5000/users/admin/${id}`)
+        axios.patch(`https://musical-melody-server.vercel.app/users/admin/${id}`)
             .then(data => {
                 refetch()
             })
     }
     const makeInstructor = (id) => {
-        axios.patch(`http://localhost:5000/users/instructor/${id}`)
+        axios.patch(`https://musical-melody-server.vercel.app/users/instructor/${id}`)
             .then(data => {
                 refetch()
             })
