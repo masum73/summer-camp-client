@@ -14,7 +14,7 @@ const Instructor = () => {
                     users.map((user, index) => {
                         return <Card  key={index} className='my-12 w-96 mx-auto'>
                             <CardHeader color="blue-gray" className="relative h-56">
-                                <img src={user.instructorPhoto} alt="img-blur-shadow" layout="fill" />
+                                <img src={user.photoURL} alt="img-blur-shadow" layout="fill" />
                             </CardHeader>
                             <CardBody>
                                 <Typography variant="h5" color="blue-gray" className="mb-2">
