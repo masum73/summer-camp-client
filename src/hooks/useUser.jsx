@@ -5,7 +5,7 @@ const useUser = () => {
     const {data: users = [], isLoading: loading, refetch} = useQuery({
         queryKey: ['users'],
         queryFn: async() => {
-            const res = await fetch('https://musical-melody-server.vercel.app/users');
+            const res = await fetch('https://musical-melody-server-nv59blkol-masum73.vercel.app/users');
             return res.json();
         }
     })

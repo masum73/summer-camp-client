@@ -12,7 +12,7 @@ const InstructorAddClass = () => {
     const onSubmit = (data) => {
         console.log(data);
 
-        axios.post('https://musical-melody-server.vercel.app/addclass', { ...data, instructor: user._id , price: parseFloat(data.price), availableSeats: parseFloat(data.availableSeats)  })
+        axios.post('https://musical-melody-server-nv59blkol-masum73.vercel.app/addclass', { ...data, instructor: user._id , price: parseFloat(data.price), availableSeats: parseFloat(data.availableSeats)  })
             .then(data => {
                 // refetch()
                 reset()

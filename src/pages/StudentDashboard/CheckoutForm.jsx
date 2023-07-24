@@ -20,7 +20,7 @@ const CheckoutForm = ({ studentClass }) => {
         if(!studentClass){
             return
         }
-        axios.post('https://musical-melody-server.vercel.app/create-payment-intent', { price: studentClass?.class?.price })
+        axios.post('https://musical-melody-server-nv59blkol-masum73.vercel.app/create-payment-intent', { price: studentClass?.class?.price })
             .then(res => {
                 console.log(res.data.clientSecret)
                 setClientSecret(res.data.clientSecret);
@@ -87,7 +87,7 @@ const CheckoutForm = ({ studentClass }) => {
                 transactionId: paymentIntent.id,
                 price: studentClass?.class?.price
             }
-            axios.patch(`https://musical-melody-server.vercel.app/payments/${studentClass._id}`, payment)
+            axios.patch(`https://musical-melody-server-nv59blkol-masum73.vercel.app/payments/${studentClass._id}`, payment)
                 .then(res => {
                     console.log(res.data);
                     // if (res.data.insertResult.insertedId) {
