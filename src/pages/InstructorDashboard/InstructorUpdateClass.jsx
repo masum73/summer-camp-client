@@ -10,7 +10,7 @@ const InstructorUpdateClass = () => {
     const {id} = useParams('id')
     console.log({id});
     useEffect(() => {
-        axios.get(`https://musical-melody-server-masum73.vercel.app/classes/${id}`)
+        axios.get(`https://musical-melody-server.vercel.app/classes/${id}`)
             .then(data => {
                 setCls(data.data)
                 console.log(data.data);
@@ -19,7 +19,7 @@ const InstructorUpdateClass = () => {
 
     const onSubmit = (submitData) => {
         console.log(submitData);
-        axios.patch(`https://musical-melody-server-masum73.vercel.app/updateclass/${id}`, {...submitData})
+        axios.patch(`https://musical-melody-server.vercel.app/updateclass/${id}`, {...submitData})
             .then(data => {
                 console.log(data);
                 setCls(data.data)

@@ -46,7 +46,7 @@ const Login = () => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
-                fetch('https://musical-melody-server-masum73.vercel.app/users', {
+                fetch('https://musical-melody-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
