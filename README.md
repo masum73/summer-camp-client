@@ -11,7 +11,7 @@
 * Users can login with Google sign also.
 
 ## Packages: 
-### axios, react hook form, sweet alert2, react query, firebase, stripe 
+### axios, react hook form, sweet alert2, react query, firebase, stripe, tailwind, react, react router 
 
 ## Project live Link
 https://musical-melody-f0fea.web.app/
