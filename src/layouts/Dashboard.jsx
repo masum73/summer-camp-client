@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import NavigationBar from '../shared/Navigationbar';
+import NavigationBar from '../shared/NavigationBar';
 import Footer from '../shared/Footer';
 import { Link, Outlet } from 'react-router-dom';
 import {
