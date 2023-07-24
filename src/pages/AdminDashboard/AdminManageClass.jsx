@@ -11,7 +11,7 @@ const AdminManageClass = () => {
 
 
     const makeApproved = (id) => {
-        axios.patch(`https://musical-melody-server-nv59blkol-masum73.vercel.app/updateclass/${id}`, {status: "approved"})
+        axios.patch(`https://musical-melody-server-masum73.vercel.app/updateclass/${id}`, {status: "approved"})
             .then(data => {
                 refetch()
             })
@@ -19,7 +19,7 @@ const AdminManageClass = () => {
     const makeDenied = (id) => {
         const feedback = prompt("Your feedback here!")
 
-        axios.patch(`https://musical-melody-server-nv59blkol-masum73.vercel.app/updateclass/${id}`, {status: "denied", feedback: feedback})
+        axios.patch(`https://musical-melody-server-masum73.vercel.app/updateclass/${id}`, {status: "denied", feedback: feedback})
             .then(data => {
                 refetch()
             })

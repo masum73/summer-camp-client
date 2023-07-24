@@ -5,7 +5,7 @@ const useSelectedClass = (query='') => {
     const {data: selectedClass = [], isLoading: loading, refetch} = useQuery({
         queryKey: ['selectedClass'],
         queryFn: async() => {
-            const res = await fetch('https://musical-melody-server-nv59blkol-masum73.vercel.app/selectedclass' + query);
+            const res = await fetch('https://musical-melody-server-masum73.vercel.app/selectedclass' + query);
             return res.json();
         }
     })
