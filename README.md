@@ -1,4 +1,4 @@
-# Projects Details are below
+# Musical Melody Projects Details are below
 
 * It is a musical instrument learning site called Musical Melody.
 
@@ -9,6 +9,9 @@
 * Admin can manage instructor, approved or denied and give feedback to instructor
 
 * Users can login with Google sign also.
+
+## Packages: 
+### axios, react hook form, sweet alert2, react query, firebase, stripe 
 
 ## Project live Link
 https://musical-melody-f0fea.web.app/
