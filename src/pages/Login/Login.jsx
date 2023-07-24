@@ -77,7 +77,7 @@ const Login = () => {
                             <Input type="email" label='Email' size="lg" {...register("email", { required: true })} name="email" />
                         </div>
                         <div className='my-4'>
-                            <Input type="text" label='Password' size="lg" {...register("password", { required: true })} name="password" />
+                            <Input type="password" label='Password' size="lg" {...register("password", { required: true })} name="password" />
                         </div>
                         <Button color='green' type='submit' variant="gradient" fullWidth>
                             Login
